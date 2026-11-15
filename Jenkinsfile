@@ -18,7 +18,11 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t jenkins-cicd-app:latest .'
+                sh '''
+                    docker build \
+                    -t jenkins-cicd-app:${BUILD_NUMBER} \
+                    -t jenkins-cicd-app:latest .
+                '''
             }
         }
 
@@ -31,7 +35,7 @@ pipeline {
                     --name jenkins-cicd-app \
                     --restart unless-stopped \
                     -p 80:8080 \
-                    jenkins-cicd-app:latest
+                    jenkins-cicd-app:${BUILD_NUMBER}
                 '''
             }
         }
