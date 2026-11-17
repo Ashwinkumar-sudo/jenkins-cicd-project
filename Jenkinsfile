@@ -70,6 +70,7 @@ pipeline {
 
                     for i in $(seq 1 10); do
                         if curl -fsS http://localhost/ >/dev/null; then
+                            echo "${PREVIOUS_VERSION}" > /var/lib/jenkins/deployed-version
                             echo "Rollback successful: ${PREVIOUS_VERSION}"
                             exit 1
                         fi
