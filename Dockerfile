@@ -7,4 +7,4 @@ COPY target/jenkins-cicd-project-1.0.jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "wrong-app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
