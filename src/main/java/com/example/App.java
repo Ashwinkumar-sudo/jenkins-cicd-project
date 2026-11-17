@@ -24,7 +24,7 @@ public class App {
                 <html>
                 <head><title>Jenkins CI/CD Project</title></head>
                 <body style="text-align:center;font-family:Arial;">
-                <h1><h1>Hello World! - Version 02</h1></h1>
+                <h1><h1>Hello World! - Version 03</h1></h1>
                 <h2>Welcome to Jenkins CI/CD Pipeline</h2>
                 <p>Automatically deployed using Docker and AWS EC2</p>
                 </body>
